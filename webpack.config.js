@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const config = ((env = 'dev') => {
+  console.log(env);
   const config = require(`./webpack.config.${env}`);
   const files = fs.readdirSync('./public/javascripts');;
   const entry = {};
@@ -13,17 +14,6 @@ const config = ((env = 'dev') => {
 
   config.entry = entry;
   return config;
-})();
+});
 
 module.exports = config;
-
-// module.exports = {
-//   entry: {
-//     pageOne: './public/javascripts/pageOne.js', 
-//     pageTwo: './public/javascripts/pageTwo.js',
-//   },
-//   output: {
-//     filename: '[name].js',
-//     path: path.resolve(__dirname, 'public/entries'),
-//   }
-// };

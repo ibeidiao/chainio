@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -41,6 +42,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin([path.resolve(__dirname, 'public/entries')]),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: false,
+      }
+    })
   ]
 }
