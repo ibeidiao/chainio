@@ -5,6 +5,7 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const favicon = require('koa-favicon')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
@@ -13,6 +14,9 @@ const users = require('./routes/users')
 onerror(app)
 
 // middlewares
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
+
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
 }))
@@ -23,6 +27,11 @@ app.use(require('koa-static')(__dirname + '/public'))
 app.use(views(__dirname + '/views', {
   extension: 'ejs'
 }))
+
+// locals全局变量设置
+!function() {
+	global.env = app.env;
+}();
 
 // logger
 app.use(async (ctx, next) => {
