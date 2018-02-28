@@ -1,14 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'public/entries'),
+    path: path.resolve(__dirname, 'public/dist'),
+    publicPath: "/dist/",
   },
   module: {
     rules: [
@@ -19,20 +20,22 @@ module.exports = {
       },
       {
         test: /\.(css|less)$/,
-        use: [
-          'style-loader', 
-          'css-loader', 
-          { 
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: [
-                autoprefixer()
-              ]
-            }
-          },
-          'less-loader'
-        ]
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader', 
+            { 
+              loader: 'postcss-loader',
+              options: {
+                ident: 'postcss',
+                plugins: [
+                  autoprefixer()
+                ]
+              }
+            },
+            'less-loader'
+          ]
+        })
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -41,12 +44,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin([path.resolve(__dirname, 'public/entries')]),
+    new CleanWebpackPlugin([path.resolve(__dirname, 'public/dist')]),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
         drop_console: false,
       }
-    })
+    }),
+    new ExtractTextPlugin('[name].css'),  
   ]
 }

@@ -2,13 +2,12 @@ const path = require('path');
 const fs = require('fs');
 
 const config = ((env = 'dev') => {
-  console.log(env);
   const config = require(`./webpack.config.${env}`);
-  const files = fs.readdirSync('./public/js');;
+  const files = fs.readdirSync('./public/src/js');;
   const entry = {};
   
   files.forEach(file => {
-    const filePath = path.resolve(__dirname, './public/js', file);
+    const filePath = path.resolve(__dirname, './public/src/js', file);
     var statInfo = fs.statSync(filePath);
     
     if (statInfo.isFile()) {

@@ -2,12 +2,9 @@
 <html>
   <head>
     <title>去中心化的职业信用联盟</title>
-    <link rel='stylesheet' href='/css/bootstrap.min.css' />
-    <% if (env == 'dev') { %>
-    <link rel="stylesheet/less" type="text/css" charset="utf-8" href="/less/index.less">
-    <script type="text/javascript" src="/js/vendor/less.min.js"></script>
-    <% } else { %>
-    <link rel="stylesheet" type="text/css" charset="utf-8" href="/css/index.css">
+    <link rel='stylesheet' href='/asset/css/bootstrap.min.css' />
+    <% if (env !== 'dev') { %>
+      <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/pageOne.css">
     <% } %>
   </head>
   <body>
@@ -144,6 +141,6 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="/entries/pageOne.js"></script>
+    <script type="text/javascript" src="/dist/pageOne.js"></script>
   </body>
 </html>

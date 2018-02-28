@@ -7,7 +7,8 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'public/entries'),
+    path: path.resolve(__dirname, 'public/dist'),
+    publicPath: "/dist/",
   },
   module: {
     rules: [
@@ -41,7 +42,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
-    new CleanWebpackPlugin([path.resolve(__dirname, 'public/entries')]),
+    new CleanWebpackPlugin([path.resolve(__dirname, 'public/dist')]),
     new webpack.HotModuleReplacementPlugin()
   ]
 }
