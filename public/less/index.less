@@ -22,7 +22,7 @@ header {
 			margin-left: 25px;
 			a {
 				color: #34495C;
-				font-size: 14px;
+				font-size: 16px;
 				&:hover {
 					text-decoration: none;
 				}
@@ -197,9 +197,17 @@ header {
 	position: relative;
 	background-color: #F2F6FA;
 	height: 583px;
+	padding-top: 82px;
+	h2 {
+		text-align: center;
+		text-align: center;
+		color: #34495C;
+		font-size: 40px;
+		overflow: hidden;
+	}
 	.line {
 		position: absolute;
-		top: 291px;
+		top: 350px;
 		height: 1px;
 		font-size: 0;
 		background-color: #E1EBF5;
@@ -229,12 +237,12 @@ header {
 					}
 				}
 				&.m3 {
-					left: 510px;
+					left: 610px;
 				}
 			}
 			.down {
 				&.m2, &.m4 {
-					left: 260px;
+					left: 310px;
 					position: absolute;
 					top: -10px;
 					background: url(../images/down.png) no-repeat;
@@ -251,12 +259,115 @@ header {
 					}
 				}
 				&.m4 {
-					left: 760px;
+					left: 910px;
 				}
 			}
 		}
 	}
 }
+
+.co {
+	background-color: #fff;
+	padding: 82px 0 82px;
+	h2 {
+		padding-bottom: 82px;
+		text-align: center;
+		text-align: center;
+		color: #34495C;
+		font-size: 40px;
+		overflow: hidden;
+	}
+	.logos {
+		width: 1270px;
+		margin: 0 auto;
+		.logo-item {
+			float: left;
+			display: inline;
+			width: 20%;
+			p {
+				width: 134px;
+				height: 62px;
+				background-repeat: no-repeat;
+				background-position: center;
+				margin: 10px auto;
+				&.frees {
+					background-image: url(../images/logos/fengrui.png);
+				}
+				&.xinghe {
+					background-image: url(../images/logos/xinghe.png);
+				}
+				&.lvchengzhongguo {
+					background-image: url(../images/logos/lvchengzhongguo.png);
+				}
+				&.hailiang {
+					background-image: url(../images/logos/hailiang.png);
+				}
+				&.wacai {
+					background-image: url(../images/logos/wacai.png);
+				}
+				&.jinzhouyinhang {
+					background-image: url(../images/logos/jinzhouyinhang.png);
+				}
+				&.yangguangbaoxian {
+					background-image: url(../images/logos/yangguangbaoxian.png);
+				}
+				&.kuaishou {
+					background-image: url(../images/logos/kuaishou.png);
+				}
+				&.paipaidai {
+					background-image: url(../images/logos/paipaidai.png);
+				}
+				&.liepin {
+					background-image: url(../images/logos/liepin.png);
+				}
+				&.okcoin {
+					background-image: url(../images/logos/okcoin.png);
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: #273237;
+	.logo-row {
+		padding: 59px 0 64px;
+		border-bottom: 1px solid #666;
+		.logo {
+			float: left;
+			display: inline;
+			width: 174px;
+			height: 42px;
+			background: url(../images/logo.png) no-repeat;
+		}
+		.nav-links {
+			float: right;
+			display: inline;
+			list-style: none;
+			li {
+				display: inline-block;
+				line-height: 42px;
+				margin-left: 45px;
+				a {
+					color: #fff;
+					font-size: 16px;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	.copyright-row {
+		.text {
+			padding: 38px 0;
+			color: #fff;
+			font-size: 14px;
+			margin-bottom: 0;
+		}
+	}
+}
+
 
 .btn-hover (@bg, @c: #fff, @offset: 5%) {
     &:hover {
