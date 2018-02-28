@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        use: ['file-loader?outputPath=img/']
       }
     ]
   },
@@ -51,6 +51,6 @@ module.exports = {
         drop_console: false,
       }
     }),
-    new ExtractTextPlugin('[name].css'),  
+    new ExtractTextPlugin('css/[name].css'),  
   ]
 }
