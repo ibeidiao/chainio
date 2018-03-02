@@ -1,146 +1,166 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>去中心化的职业信用联盟</title>
-    <link rel='stylesheet' href='/asset/css/bootstrap.min.css' />
+    <script type="text/javascript" src="/asset/js/flexible.js"></script>
+    <!-- <link rel='stylesheet' href='/asset/css/bootstrap.min.css' /> -->
     <% if (env !== 'dev') { %>
       <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/pageOne.css">
     <% } %>
   </head>
   <body>
-    <header class="container-fluid clearfix">
-      <div class="row">
-        <div class="col-md-12">
-          <a href="/" class="logo" title="去中心化的职业信用联盟"></a>
-          <ul class="nav-links">
-            <li><a href="#">首页</a></li>
-            <li><a href="#">我们的产品</a></li>
-            <li><a href="#">区块链背调</a></li>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">线路图</a></li>
-            <li><a href="#">合作伙伴</a></li>
-            <!-- <li><a href="#" class="btn-rl btn-gray btn-register">注册</a></li>
-            <li><a href="#" class="btn-rl btn-main btn-login">登录</a></li> -->
-          </ul>
-        </div>
-      </div>
-    </header>
-    <div class="chainio clearfix">
-      <div class="l-p">
-        <h2>去中心化的职业信用联盟</h2>
-        <h3>基于区块链技术，构建职业信用联盟链，提升雇员<br />背景调查效率，让中国职业信用环境更美好</h3>
-        <a href="javascript:;" class="btn-main join-union">加入职业信用联盟</a>
-      </div>
-      <div class="r-p">
-        <p></p>
-      </div>
-    </div>
-    <div class="out-product clearfix">
-      <h2>我们的产品</h2>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 words">
-            zxchain.io是基于区块链背调产品
-            <p>职业信用联盟链中的企业记录着离职员工在本企业就职的入离职时间、职位、离职原因、是否有劳动争议、是否竞业禁止等工作履历信息，离职员工的工作履历信息可提供给联盟链中其他企业（获得员工本人授权是前提）。通过这些不可篡改的职业信息，企业可以更加全面、真实的了解应聘候选人的过往履历，从而招到更放心的人。同时，对于求职者来说，可以获得更为公平的竞争机会</p>
-          </div>
-          <div class="col-md-6 advantage">
-            <div class="adv-item pic-right clearfix">
-              <div>
-                真实可靠
-                <p>区块链底层技术带来的信息不可篡改性</p>
+    <div class="main-wrap">
+        <header class="container-fluid clearfix front-header">
+            <div class="row">
+              <div class="col-12">
+                <a href="/" class="logo" title="去中心化的职业信用联盟"></a>
+                <a href="javascript:;" class="icon-nav-btn"></a>
+                <ul class="nav-links">
+                  <li><a href="#">首页</a></li>
+                  <li><a href="#">我们的产品</a></li>
+                  <li><a href="#">区块链背调</a></li>
+                  <li><a href="#">关于我们</a></li>
+                  <li><a href="#">线路图</a></li>
+                  <li><a href="#">合作伙伴</a></li>
+                  <li><a href="#" class="btn-rl btn-gray btn-register">注册</a></li>
+                  <li><a href="#" class="btn-rl btn-main btn-login">登录</a></li>
+                </ul>
               </div>
-              <span class="veracity"></span>
             </div>
-            <div class="adv-item clearfix" style="margin: 40px 0;">
-              <div>
-                提升效率
-                <p>通过区块链技术的去中心化特性提升效率</p>
-              </div>
-              <span class="efficiency"></span>
+          </header>
+          <div class="chainio clearfix row container">
+            <div class="l-p col-6 col-xs-12">
+              <h2> <span>去中心化的</span><span>职业信用联盟</span></h2>
+              <h3><span>基于区块链技术，构建职业信用联盟链，</span><span>提升雇员背景调查效率，让中国职业信用环境更美好</span></h3>
+              <a href="javascript:;" class="btn-main join-union">加入职业信用联盟</a>
             </div>
-            <div class="adv-item pic-right clearfix">
-              <div>
-                降低成本
-                <p>联盟链中进行互助调查极大降低成本</p>
-              </div>
-              <span class="cost"></span>
+            <div class="r-p col-6">
+              <p></p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="tec-process clearfix">
-      <h2>技术及流程</h2>
-      <div class="steps">
-        <span>1.委托方发起背调</span>
-        <span>2.获得候选人授权</span>
-        <span>3.通过区块链的技术传播至委托方</span>
-        <span>4.委托方接受信息，完成履历验证</span>
-        <div class="clearfix"></div>
-        <span>5.返回结果至委托方</span>
-      </div>
-      <p class="process-pic"></p>
-    </div>
-    <div class="about-us clearfix">
-      <h2>关于我们</h2>
-      <div class="content">我们有一支区块链方面的技术专家及顾问团队<br />核心团队来自阿里巴巴、华为、恒生电子、浙大网新等知名公司<br />我们有职业信用领域方面的丰富经验<br />运作有近十万人的企业HR互助联盟<br />运营有已服务于数千家企业的互联网背景调查公司（i背调）<br />我们是区块链技术应用于职业信用场景的先行者和最佳实践者</div>
-    </div>
-    <div class="roadmap clearfix">
-      <h2>路线图</h2>
-      <div class="line">
-        <div class="map">
-          <div class="m1 up"><p>Q4 2017 - Q1 2018<br />完成职业信用联盟极其交易模型<br />实现职业信用联盟链V1.0上链</p></div>
-          <div class="m2 down"><p>Q2 - Q4, 2018<br />推出基于智能合约的应用<br />5000家企业加入联盟链</p></div>
-          <div class="m3 up"><p>2019<br />100000家企业上链<br />持续完善联盟链功能</p></div>
-          <div class="m4 down"><p>2020<br />100万家企业上链<br />拓展基于职业信用的其他关联服务</p></div>
-        </div>
-      </div>
-    </div>
-    <div class="co clearfix">
-      <h2>投资机构与合作伙伴</h2>
-      <div class="logos">
-        <div class="logo-item"><p class="frees"></p></div>
-        <div class="logo-item"><p class="xinghe"></p></div>
-        <div class="logo-item"><p class="lvchengzhongguo"></p></div>
-        <div class="logo-item"><p class="hailiang"></p></div>
-        <div class="logo-item"><p class="okcoin"></p></div>
-        <div class="logo-item"><p class="jinzhouyinhang"></p></div>
-        <div class="logo-item"><p class="yangguangbaoxian"></p></div>
-        <div class="logo-item"><p class="kuaishou"></p></div>
-        <div class="logo-item"><p class="paipaidai"></p></div>
-        <div class="logo-item"><p class="liepin"></p></div>
-      </div>
-      </div>
-    </div>
-    <footer>
-      <div class="logo-row">
-        <div class="container clearfix">
-          <div class="row">
-            <div class="col-md-2">
-              <a href="/" class="logo" title="去中心化的职业信用联盟"></a>
+          <div class="our-product clearfix">
+            <h2>我们的产品</h2>
+            <div class="container">
+              <div class="content-wrap row">
+                <div class="words">
+                  zxchain.io是基于区块链背调产品
+                  <p>职业信用联盟链中的企业记录着离职员工在本企业就职的入离职时间、职位、离职原因、是否有劳动争议、是否竞业禁止等工作履历信息，离职员工的工作履历信息可提供给联盟链中其他企业（获得员工本人授权是前提）。通过这些不可篡改的职业信息，企业可以更加全面、真实的了解应聘候选人的过往履历，从而招到更放心的人。同时，对于求职者来说，可以获得更为公平的竞争机会</p>
+                </div>
+                <div class="advantage">
+                  <div class="adv-item pic-right clearfix">
+                    <div>
+                      真实可靠
+                      <p>区块链底层技术带来的信息不可篡改性</p>
+                    </div>
+                    <span class="veracity"></span>
+                  </div>
+                  <div class="adv-item clearfix" style="margin: 40px 0;">
+                    <div>
+                      提升效率
+                      <p>通过区块链技术的去中心化特性提升效率</p>
+                    </div>
+                    <span class="efficiency"></span>
+                  </div>
+                  <div class="adv-item pic-right clearfix">
+                    <div>
+                      降低成本
+                      <p>联盟链中进行互助调查极大降低成本</p>
+                    </div>
+                    <span class="cost"></span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-10">
-              <ul class="nav-links">
+          </div>
+          <div class="tec-process clearfix">
+            <h2>技术及流程</h2>
+            <div class="steps row">
+              <p>1.委托方发起背调</p>
+              <p>2.获得候选人授权</p>
+              <p>3.通过区块链的技术传播至委托方</p>
+              <p>4.委托方接受信息，完成履历验证</p>
+              <p>5.返回结果至委托方</p>
+            </div>
+            <p class="process-pic"></p>
+          </div>
+          <div class="about-us clearfix">
+            <h2>关于我们</h2>
+            <div class="content">我们有一支区块链方面的技术专家及顾问团队<br />核心团队来自阿里巴巴、华为、恒生电子、浙大网新等知名公司<br />我们有职业信用领域方面的丰富经验<br />运作有近十万人的企业HR互助联盟<br />运营有已服务于数千家企业的互联网背景调查公司（i背调）<br />我们是区块链技术应用于职业信用场景的先行者和最佳实践者</div>
+          </div>
+          <div class="roadmap clearfix">
+            <h2>路线图</h2>
+            <div class="line">
+              <div class="map container">
+                <div class="map-item m1 up"><p>Q4 2017 - Q1 2018<br />完成职业信用联盟极其交易模型<br />实现职业信用联盟链V1.0上链</p></div>
+                <div class="map-item m2 down"><p>Q2 - Q4, 2018<br />推出基于智能合约的应用<br />5000家企业加入联盟链</p></div>
+                <div class="map-item m3 up"><p>2019<br />100000家企业上链<br />持续完善联盟链功能</p></div>
+                <div class="map-item m4 down"><p>2020<br />100万家企业上链<br />拓展基于职业信用的其他关联服务</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="co clearfix">
+            <h2>投资机构与合作伙伴</h2>
+            <div class="logos container">
+              <div class="logo-item"><p class="frees"></p></div>
+              <div class="logo-item"><p class="xinghe"></p></div>
+              <div class="logo-item"><p class="lvchengzhongguo"></p></div>
+              <div class="logo-item"><p class="hailiang"></p></div>
+              <div class="logo-item"><p class="okcoin"></p></div>
+              <div class="logo-item"><p class="jinzhouyinhang"></p></div>
+              <div class="logo-item"><p class="yangguangbaoxian"></p></div>
+              <div class="logo-item"><p class="kuaishou"></p></div>
+              <div class="logo-item"><p class="paipaidai"></p></div>
+              <div class="logo-item"><p class="liepin"></p></div>
+            </div>
+            </div>
+          </div>
+          <footer>
+            <div class="logo-row">
+              <div class="container clearfix">
+                <div class="row">
+                  <div class="col-2 col-xs-12">
+                    <a href="/" class="logo" title="去中心化的职业信用联盟"></a>
+                  </div>
+                  <div class="col-10 col-xs-12">
+                    <ul class="nav-links">
+                      <li><a href="#">我们的产品</a></li>
+                      <li><a href="#">区块链背调</a></li>
+                      <li><a href="#">关于我们</a></li>
+                      <li><a href="#">线路图</a></li>
+                      <li><a href="#">合作伙伴</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="copyright-row">
+              <div class="container clearfix">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text">Copyright © 2018 杭州有才信息技术有限公司. All Rights Reserved.<br/><br/>浙ICP备1    浙公网安备     号</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </div>
+    <div class="nav-mobile">
+        <div class="shadow"></div>
+        <div class="content">
+            <a href="javascript:;" class="btn-close">X 关闭</a>
+            <ul>
+                <li><a href="#">首页</a></li>
                 <li><a href="#">我们的产品</a></li>
                 <li><a href="#">区块链背调</a></li>
                 <li><a href="#">关于我们</a></li>
-                <li><a href="#">线路图</a></li>
-                <li><a href="#">合作伙伴</a></li>
-              </ul>
-            </div>
-          </div>
+                <li><a href="#">区块链图</a></li>
+                <li class="last"><a href="#">合作伙伴</a></li>                
+                <li class="last">
+                </li>
+            </ul>
         </div>
-      </div>
-      <div class="copyright-row">
-        <div class="container clearfix">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="text">Copyright © 2018 杭州有才信息技术有限公司. All Rights Reserved.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    </div>
     <script type="text/javascript" src="/dist/pageOne.js"></script>
   </body>
 </html>

@@ -1,0 +1,91 @@
+@import './header-front.less';
+@import './footer-front.less';
+
+// init user agent stylesheet
+html{color:#000;background:#FFF;}   
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,   
+fieldset,input,textarea,p,blockquote,th,td {   
+  margin:0;   
+  padding:0;   
+}   
+table{   
+  border-collapse:collapse;   
+  border-spacing:0;   
+}   
+fieldset,img {   
+  border:0;   
+}   
+address,caption,cite,code,dfn,em,strong,th,var {   
+  font-style:normal;   
+  font-weight:normal;   
+}   
+ol,ul {   
+  list-style:none;   
+}   
+caption,th {   
+  text-align:left;   
+}   
+h1,h2,h3,h4,h5,h6 {   
+  font-size:100%;   
+  font-weight:normal;   
+}   
+q:before,q:after {   
+  content:'';   
+}   
+abbr,acronym { 
+  border:0;   
+}
+*{  
+  margin: 0px;  
+  padding: 0px;  
+}   
+a{  
+  text-decoration: none;  
+  color: #000000;  
+  font-size:15px;  
+  /*字体*/  
+}  
+li{  
+  list-style: none;  
+}  
+input,img{  
+  border: none;  
+}
+
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+}
+
+#transition {
+  -webkit-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-wrap {
+  #transition;
+  &.slide-left {
+    -webkit-transform: translate(-66.67%, 0);
+    -ms-transform: translate(-66.67%, 0);
+    -o-transform: translate(-66.67%, 0);
+    transform: translate(-66.67%, 0);
+  }
+}

@@ -6,6 +6,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
+  externals: {
+    'jquery': {
+      commonjs: 'jquery',
+      commonjs2: 'jquery',
+      amd: 'jquery',
+      root: 'jquery'
+    }
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'public/dist'),
