@@ -335,7 +335,12 @@ body {
 	.btn-hover(#E5EBEB);
 }
 
-
+@media only screen and (min-width: 414px) and (max-width: 880px) and (min-device-width: 768px) {
+  @import "./index/index-880.less";
+}
+@media only screen and (max-width: 414px) {
+  @import "./index/index-414.less";
+}
 @media only screen and (max-device-width: 768px) {
   @import "./index/index-phone.less";
 }
