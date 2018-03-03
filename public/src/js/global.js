@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 $(function(){
   headerScrollPosition();
-  $('.nav-mobile').show();
+  $('.nav-mobile .content').show();
   $('.icon-nav-btn').on('click', navMobileShow);
   $('.nav-mobile .btn-close,.nav-mobile .shadow,.nav-mobile .nav-links a').on('click', navMobileHide);
 }())
