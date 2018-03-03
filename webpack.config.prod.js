@@ -52,6 +52,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({ //加载jq
+      $: 'jquery',
+      jQuery: "jquery"
+    }),
     new CleanWebpackPlugin([path.resolve(__dirname, 'public/dist')]),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
