@@ -25,7 +25,10 @@ body {
 			color: #34495C;
 			font-size: 26px;
 			line-height: 38px;
-			margin-bottom: 40px;
+      margin-bottom: 40px;
+      span {
+        display: block;
+      }
 		}
 		.join-union {
 			display: inline-block;
@@ -56,7 +59,7 @@ body {
 		padding-bottom: 60px;
 		text-align: center;
 		color: #34495C;
-		font-size: 40px;
+		font-size: 36px;
 		overflow: hidden;
   }
   .content-wrap {
@@ -142,7 +145,7 @@ body {
 		padding-bottom: 60px;
 		text-align: center;
 		color: #fff;
-		font-size: 40px;
+		font-size: 36px;
 		overflow: hidden;
 	}
 	.steps {
@@ -153,7 +156,8 @@ body {
 		p {
       display: inline-block;
       font-size: 16px;
-      margin: auto 30px auto auto;
+      margin: auto;
+      text-align: center;
 		}
 	}
 	.process-pic {
@@ -171,7 +175,7 @@ body {
 		padding-bottom: 60px;
 		text-align: center;
 		color: #34495C;
-		font-size: 40px;
+		font-size: 36px;
 		overflow: hidden;
 	}
 	.content {
@@ -190,7 +194,7 @@ body {
 	h2 {
 		text-align: center;
 		color: #34495C;
-		font-size: 40px;
+		font-size: 36px;
 		overflow: hidden;
 	}
 	.line {
@@ -198,14 +202,20 @@ body {
 		top: 350px;
 		height: 1px;
 		font-size: 0;
-		background-color: #E1EBF5;
+		background-color: #cfdfee;
 		width: 100%;
 		.map {
 			position: absolute;
 			max-width: 1200px;
 			left: 0;
 			right: 0;
-			margin: 0 auto;
+      margin: 0 auto;
+      .map-item {
+        .title {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
 			.up {
 				&.m1, &.m3 {
 					left: 0;
@@ -216,12 +226,12 @@ body {
           padding-left: 26px;
 					p {
 						position: relative;
-				    left: 0;
-						top: -28px;
+				    left: 6px;
+						top: -10px;
 						width: 100%;
 						color: #34495C;
-						font-size: 16px;
-						line-height: 20px;
+						font-size: 14px;
+						line-height: 24px;
 					}
 				}
 				&.m3 {
@@ -238,12 +248,12 @@ body {
           padding-left: 26px;
 					p {
 						position: relative;
-				    left: 0;
-						top: 89px;
+				    left: 6px;
+						top: 108px;
 						width: 100%;
 						color: #34495C;
-						font-size: 16px;
-						line-height: 20px;
+						font-size: 14px;
+						line-height: 24px;
 					}
 				}
 				&.m4 {
@@ -261,7 +271,7 @@ body {
 		margin-bottom: 82px;
 		text-align: center;
 		color: #34495C;
-		font-size: 40px;
+		font-size: 36px;
 		overflow: hidden;
 	}
 	.logos {
