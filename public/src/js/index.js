@@ -6,9 +6,10 @@ $(function(){
   $('.nav-links a').on('click', function() {
     var $this = $(this),
         index = $this.parent().index(),
-        href = $this.attr('href');
+        href = $this.attr('href'),
+        headerHeight = $('.front-header').height();
     
-    $('html,body').animate({scrollTop: $(href).offset().top}, 600)
+    $('html,body').animate({scrollTop: $(href).offset().top - headerHeight}, 600)
   })
 }())
 
