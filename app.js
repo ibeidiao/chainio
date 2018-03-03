@@ -31,6 +31,7 @@ app.use(views(__dirname + '/views', {
 // locals全局变量设置
 !function() {
 	global.env = app.env;
+	global.ts = new Date().getTime();
 }();
 
 // logger
