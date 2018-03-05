@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
+  // devtool: 'eval-source-map',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'public/dist'),
@@ -27,7 +28,9 @@ module.exports = {
             options: {
               ident: 'postcss',
               plugins: [
-                autoprefixer()
+                autoprefixer({
+                  browsers: ['last 3 versions', 'Android >= 4.0', 'iOS 7', '> 5%']
+                })
               ]
             }
           },

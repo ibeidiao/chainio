@@ -11,5 +11,6 @@ $(function(){
     
     $('html,body').animate({scrollTop: $(href).offset().top - headerHeight}, 600)
   })
+
 }())
 
