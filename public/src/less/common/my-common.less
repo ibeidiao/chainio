@@ -1,0 +1,95 @@
+.my-header {
+  position: fixed;
+  top: 0;
+  left: 0;  
+  width: 100%;
+  padding: 12px 2%;
+  background: #fff;
+  box-shadow: 0px 1px 6px #ddd;
+  .logo {
+		float: left;
+		width: 174px;
+		height: 42px;
+    background: url(../../images/logo.png) no-repeat center;
+    background-size: cover!important;
+  }
+  .user-info {
+    float: right;
+    .top {
+      font-size: 0;
+      margin-right: 60px;
+      .user-head {
+        display: inline-block;
+        height: 42px;
+        width: 42px;
+        background: #ddd;
+        vertical-align: middle;
+      }
+      .user-cname {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: #34495c;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.my-left-nav {
+  position: absolute;
+  top: 127px;
+  left: 0;
+  width: 293px;
+  background: inherit;
+  .list-wrap {
+    width: 124px;
+    margin: auto;
+    padding-left: 20px;
+    .items-wrap {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      border-bottom: #c7d9eb 1px solid;
+      &.last {
+        border: none;
+      }
+      dt {
+        position: relative;
+        display: block;
+        font-size: 16px;
+        color: #34495c;
+        margin-bottom: 20px;
+        .iconfont {
+          position: absolute;
+          top: 0;
+          left: -20px;
+          display: block;
+          font-size: 16px;
+          line-height: 22px;
+          text-align: center;
+          color: #34495c;
+        }
+      }
+      dd {
+        display: block;
+        margin: 10px 0;
+        a {
+          font-size: 14px;
+          color: #34495c; 
+        }
+        &.active a {
+          color: #38A5A7;
+        }
+      }
+    }
+  }
+}
+
+.my-footer {
+  padding: 16px 0 30px;
+  font-size: 14px;
+  color: #AEAEAE;
+  border-top: 1px solid #E4E4E4;
+  width: 100%;
+  background: inherit;
+}

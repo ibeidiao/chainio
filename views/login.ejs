@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <%- include('common/head.ejs') %>
+      <title>去中心化的职业信用联盟</title>
+      <% if (env !== 'dev') { %>
+        <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/login.css?v=<%= ts %>">
+      <% } %>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="main-wrap">
+        <div class="top-wrap">
+          <h3 class="main-title">欢迎进入</h3>
+          <i class="logo"></i>
+          <p class="input-wrap">
+              <input type="password" class="self-password" placeholder="请在此输入您的私钥" />
+              <a href="javascript:;" class="btn-eye chainio-icon-eye-off iconfont"></a>
+          </p>
+          <a href="javascript:;" class="btn-login">导入</a>
+        </div>
+        <div class="bottom-wrap">
+            Copyright © 2018 杭州有才信息技术有限公司. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/dist/login.js?v=<%= ts %>"></script>
+  </body>
+</html>

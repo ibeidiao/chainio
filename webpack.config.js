@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const config = ((env = 'dev') => {
   const config = require(`./webpack.config.${env}`);
-  const files = fs.readdirSync('./public/src/js');;
+  const files = fs.readdirSync('./public/src/js');
   const entry = {};
   
   files.forEach(file => {

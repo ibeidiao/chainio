@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <%- include('../common/head.ejs') %>
+    <title>去中心化的职业信用联盟</title>
+    <% if (env !== 'dev') { %>
+      <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/my/info.css?v=<%= ts %>">
+    <% } %>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <%- include('../common/my/header.ejs', {cname: '杭州有才信息技术有限公司'}) %>
+      <%- include('../common/my/leftNav.ejs', {page: 'info'}) %>
+      <div class="main-wrap">
+        <h2 class="main-title">账号信息</h2>
+        <form action="">
+          <div class="text-wrap">
+            <label for="" class="text-lab">账号名</label>
+            <p class="text-p">ibeidiao_hugh</p>
+          </div>
+          <div class="text-wrap">
+              <label for="" class="text-lab">公司名称</label>
+              <p class="text-p">杭州有才信息技术有限公司</p>
+          </div>
+          <div class="text-wrap">
+              <label for="" class="text-lab">手机</label>
+              <p class="text-p">18728129182</p>
+          </div>
+          <div class="text-wrap">
+              <label for="" class="text-lab">邮箱</label>
+              <p class="text-p">ibeidiao_hugh@233.com</p>
+          </div>
+          <div class="text-wrap">
+              <label for="" class="text-lab">私钥</label>
+              <p class="text-p">sdfasdfasdfasdfasfdasddfasdf</p>
+          </div>
+        </form>
+      </div>
+      <%- include('../common/my/footer.ejs') %>
+    </div>
+    <script type="text/javascript" src="/dist/myInfo.js?v=<%= ts %>"></script>
+  </body>
+</html>

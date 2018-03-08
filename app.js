@@ -9,6 +9,7 @@ const favicon = require('koa-favicon')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
+const my = require('./routes/my');
 
 // error handler
 onerror(app)
@@ -45,6 +46,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
+app.use(my.routes(), my.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
