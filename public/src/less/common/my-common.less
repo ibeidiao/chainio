@@ -26,11 +26,31 @@
         vertical-align: middle;
       }
       .user-cname {
+        position: relative;
         display: inline-block;
         vertical-align: middle;
         font-size: 14px;
+        line-height: 42px;
         color: #34495c;
         margin-left: 10px;
+        cursor: pointer;
+        &::after {
+          display: block;
+          position: absolute;
+          content: "";
+          right: -16px;
+          top: 19px;
+          border: solid transparent 4px;
+          border-top-color: #A1A1A1;
+          cursor: pointer;
+          #transition;
+          transform-origin: 50% 25%;
+        }
+      }
+      &.show {
+        .user-cname::after {
+          transform: rotate(180deg);
+        }
       }
     }
   }
@@ -73,9 +93,26 @@
       dd {
         display: block;
         margin: 10px 0;
+        font-size: 0;
         a {
+          display: inline-block;
           font-size: 14px;
           color: #34495c; 
+          vertical-align: middle;
+          line-height: 20px
+        }
+        .point {
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 20px;
+          font-size: 12px;
+          padding: 0 16px;
+          background: #ED5F5F;
+          color: #fff;
+          text-align: center;
+          font-style: normal;
+          border-radius: 10px;
+          margin-left: 6px;
         }
         &.active a {
           color: #38A5A7;
