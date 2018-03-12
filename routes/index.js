@@ -7,9 +7,23 @@ router.get('/', async (ctx, next) => {
 })
 
 router.get('/login', async (ctx, next) => {
+  const returnUrl = ctx.query.returnUrl;
   await ctx.render('login', {
-    title: 'login'
+    title: '登录_',
+    returnUrl: returnUrl
   })
+})
+
+router.post('/login', async (ctx, next) => {
+  const privateKey = ctx.request.body.privateKey;
+  const returnUrl = ctx.request.body.returnUrl;
+  if ('5Jvqsujc5BWfLv7wWJAYDeyA2ShCutCrEm5jarx8GsZQkDjw8Gh' === privateKey) {
+    ctx.session.privateKey = privateKey;
+    ctx.body = { errorNo : 0 };
+  } else {
+    ctx.body = { errorNo : 1 };
+  }
+  await next();
 })
 
 router.get('/string', async (ctx, next) => {

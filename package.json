@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node bin/www",
+    "start": "nodemon bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
     "prd": "pm2 start bin/www",
     "webpack": "webpack --watch",
@@ -23,6 +23,7 @@
     "koa-logger": "^2.0.1",
     "koa-onerror": "^1.2.1",
     "koa-router": "^7.1.1",
+    "koa-session2": "^2.2.5",
     "koa-static": "^3.0.0",
     "koa-views": "^5.2.1",
     "webpack": "^3.11.0"
@@ -39,7 +40,7 @@
     "file-loader": "^1.1.9",
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
-    "nodemon": "^1.8.1",
+    "nodemon": "^1.17.1",
     "postcss-loader": "^2.1.0",
     "style-loader": "^0.20.2"
   }

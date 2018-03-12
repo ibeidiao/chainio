@@ -7,6 +7,8 @@ const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const favicon = require('koa-favicon')
 
+const session = require("koa-session2");
+
 const index = require('./routes/index')
 const users = require('./routes/users')
 const my = require('./routes/my');
@@ -34,6 +36,20 @@ app.use(views(__dirname + '/views', {
 	global.env = app.env;
 	global.ts = new Date().getTime();
 }();
+
+app.use(session({
+    key: "CHAINIO_SESSIONID",   //default "koa:sess"
+}));
+
+// login control
+app.use(async (ctx, next) => {
+	if (/^\/my\//i.test(ctx.url)) {
+		if (!ctx.session.privateKey) {
+			ctx.redirect(`/login?returnUrl=${ctx.url}`);
+		}
+	}
+  await next()
+})
 
 // logger
 app.use(async (ctx, next) => {
