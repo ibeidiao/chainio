@@ -42,14 +42,14 @@ app.use(session({
 }));
 
 // login control
-app.use(async (ctx, next) => {
+/*app.use(async (ctx, next) => {
 	if (/^\/my\//i.test(ctx.url)) {
 		if (!ctx.session.privateKey) {
 			ctx.redirect(`/login?returnUrl=${ctx.url}`);
 		}
 	}
   await next()
-})
+})*/
 
 // logger
 app.use(async (ctx, next) => {

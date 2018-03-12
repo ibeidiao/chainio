@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <%- include('../common/head.ejs') %>
+    <title><%= title %>职业信用联盟</title>
+    <% if (env !== 'dev') { %>
+      <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/my/orderList.css?v=<%= ts %>">
+    <% } %>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <%- include('../common/my/header.ejs', {cname: '杭州有才信息技术有限公司'}) %>
+      <%- include('../common/my/leftNav.ejs', {page: 'orderList'}) %>
+      <div class="main-wrap">
+        <h2 class="main-title">背调记录</h2>
+        <div class="tab clearfix2">
+          <div class="tab-switchs">
+            <ul>
+              <li class="active"><a href="javascript:;">发起的背调</a></li>
+              <li><a href="javascript:;">接收的背调</a></li>
+            </ul>
+          </div>
+          <div class="tab-contents">
+            <div class="tab-content active">
+              <table width="100%" cellpadding="0" cellspacing="1">
+                <thead>
+                  <tr>
+                    <th>候选人姓名</th>
+                    <th>背调类型</th>
+                    <th>发起时间</th>
+                    <th>积分消费</th>
+                    <th>背调状态</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                  <tr>
+                    <td>张三</td>
+                    <td>履历核实</td>
+                    <td>2018-01-05</td>
+                    <td>-100</td>
+                    <td>等待结果</td>
+                    <td>详情</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-content"></div>
+          </div>
+        </div>
+        <div class="list-page">
+          <a href="javascript:;" class="pre i-b"><i class="iconfont chainio-icon-sanjiaoleft"></i></a>
+          <span class="text i-b">1 / 3</span>
+          <a href="javascript:;" class="next i-b"><i class="iconfont chainio-icon-sanjiaoright"></i></a>
+          <input type="text" class="input-field i-b" />
+          <a href="javascript:;" class="btn-jump i-b">跳转</a>
+        </div>
+      </div>
+      <%- include('../common/my/footer.ejs') %>
+    </div>
+    <script type="text/javascript" src="/dist/orderList.js?v=<%= ts %>"></script>
+  </body>
+</html>

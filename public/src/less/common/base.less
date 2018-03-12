@@ -57,12 +57,29 @@ input,img{
   box-sizing: border-box;
 }
 
+.i-b {
+  display: inline-block;
+  display: -moz-inline-stack;
+  /* zoom: 1; */
+  vertical-align: top;
+}
+
 .clearfix::after {
   display: block;
   clear: both;
   content: "";
   font-size: 0;
   height: 0;
+}
+
+.clearfix2::before,
+.clearfix2::after {
+  content: '';
+  display: table;
+}
+
+.clearfix2::after {
+  clear: both;
 }
 
 body,html {
@@ -102,4 +119,8 @@ h1, h2, h3, h4, h5, h6 {
   //   -o-transform: translate(-66.67%, 0);
   //   transform: translate(-66.67%, 0);
   // }
+}
+
+.pt-0 {
+  padding-top: 0 !important;
 }

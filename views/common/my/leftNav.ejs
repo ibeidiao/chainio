@@ -3,7 +3,7 @@
     <li class="items-wrap">
       <dl>
           <dt><i class="chainio-icon-trumpet iconfont"></i>联盟概况</dt>
-          <dd class="<% if(page === 'info') { %>active<% } %>"><a href="#">账号信息</a></dd>
+          <dd class="<% if(page === 'info') { %>active<% } %>"><a href="/my/info">账号信息</a></dd>
         </dl>
     </li>
     <li class="items-wrap">
@@ -11,7 +11,7 @@
         <dt><i class="chainio-icon-mokuai iconfont"></i>联盟背调</dt>
         <dd><a href="#">发起背调</a></dd>
         <dd><a href="#">收到背调</a><i class="point">3</i></dd>
-        <dd><a href="#">背调记录</a></dd>
+        <dd class="<% if(page === 'orderList') { %>active<% } %>">><a href="/my/orderList">背调记录</a></dd>
         <dd><a href="#">背调积分</a></dd>
       </dl>
     </li>

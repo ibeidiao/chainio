@@ -2,18 +2,14 @@ const router = require('koa-router')()
 
 router.get('/my/info', async (ctx, next) => {
   await ctx.render('my/info', {
-    title: 'my info!'
+    title: '账号信息_'
   })
 })
 
-router.get('/string', async (ctx, next) => {
-  ctx.body = 'koa2 string'
-})
-
-router.get('/json', async (ctx, next) => {
-  ctx.body = {
-    title: 'koa2 json'
-  }
+router.get('/my/orderList', async (ctx, next) => {
+  await ctx.render('my/orderList', {
+    title: '背调记录_'
+  })
 })
 
 module.exports = router
