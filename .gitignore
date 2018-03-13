@@ -35,4 +35,4 @@ npm-debug.log
 # webpack
 public/dist
 
-.nohup.out
+nohup.out
