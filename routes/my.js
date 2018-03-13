@@ -2,7 +2,7 @@ const router = require('koa-router')()
 
 router.get('/my/index', async (ctx, next) => {
   await ctx.render('my/index', {
-    title: '联盟概况_'
+    title: '联盟链信息_'
   })
 })
 
@@ -33,6 +33,12 @@ router.get('/my/send', async (ctx, next) => {
 router.get('/my/points', async (ctx, next) => {
   await ctx.render('my/points', {
     title: '背调积分_'
+  })
+})
+
+router.get('/my/receive/info/:id', async (ctx, next) => {
+  await ctx.render('my/receiveInfo', {
+    title: '背调详情_'
   })
 })
 
