@@ -124,3 +124,11 @@ h1, h2, h3, h4, h5, h6 {
 .pt-0 {
   padding-top: 0 !important;
 }
+
+.btn-hover (@bg, @c: #fff, @offset: 5%) {
+  &:hover {
+    color: @c;
+    background: darken(@bg, @offset);
+    text-decoration: none;
+  }
+}

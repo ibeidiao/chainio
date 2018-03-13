@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <%- include('../common/head.ejs') %>
+    <title><%= title %>职业信用联盟</title>
+    <% if (env !== 'dev') { %>
+      <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/my/points.css?v=<%= ts %>">
+    <% } %>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <%- include('../common/my/header.ejs', {cname: '杭州有才信息技术有限公司'}) %>
+      <%- include('../common/my/leftNav.ejs', {page: 'points'}) %>
+      <div class="main-wrap">
+        <h2 class="main-title">背调积分</h2>
+        <p class="point">1000</p>
+        <div class="funcs"><a href="javascript:;" class="btn-cz">充值</a><a href="javascript:;" class="btn-tx">提现</a></div>
+        <div class="remark">
+          <i class="iconfont chainio-icon-gantanhao"></i>
+          <ul>
+            <li>背调积分可用于发起背调并且支付费用</li>
+            <li>背调积分可以提现</li>
+            <li>其他相关的说明</li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-wrap point-stream">
+        <h2 class="main-title">积分流水</h2>
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <thead>
+            <tr>
+              <th>操作时间</th>
+              <th>操作类型</th>
+              <th>积分数量</th>
+              <th>状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2018-03-15</td>
+              <td>充值</td>
+              <td>+100</td>
+              <td>充值成功</td>
+            </tr>
+            <tr>
+              <td>2018-03-12</td>
+              <td>发起背调</td>
+              <td>-100</td>
+              <td>背调已发出</td>
+            </tr>
+            <tr>
+              <td>2018-02-24</td>
+              <td>回复背调</td>
+              <td>+100</td>
+              <td>回复成功</td>
+            </tr>
+            <tr>
+              <td>2018-02-20</td>
+              <td>提现</td>
+              <td>-200</td>
+              <td>正在提现中</td>
+            </tr>
+            <tr>
+              <td>2018-02-11</td>
+              <td>充值</td>
+              <td>+100</td>
+              <td>充值成功</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="list-page">
+          <a href="javascript:;" class="pre i-b"><i class="iconfont chainio-icon-sanjiaoleft"></i></a>
+          <span class="text i-b">1 / 3</span>
+          <a href="javascript:;" class="next i-b"><i class="iconfont chainio-icon-sanjiaoright"></i></a>
+          <input type="text" class="input-field i-b" />
+          <a href="javascript:;" class="btn-jump i-b">跳转</a>
+        </div>
+      </div>
+      <%- include('../common/my/footer.ejs') %>
+    </div>
+    <script type="text/javascript" src="/dist/points.js?v=<%= ts %>"></script>
+  </body>
+</html>

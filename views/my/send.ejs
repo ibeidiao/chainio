@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <%- include('../common/head.ejs') %>
+    <title><%= title %>职业信用联盟</title>
+    <% if (env !== 'dev') { %>
+      <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/my/send.css?v=<%= ts %>">
+    <% } %>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <%- include('../common/my/header.ejs', {cname: '杭州有才信息技术有限公司'}) %>
+      <%- include('../common/my/leftNav.ejs', {page: 'send'}) %>
+      <div class="main-wrap">
+        <h2 class="main-title">发起背调</h2>
+        <form action="/my/send" method="post">
+          <div class="form-action send-bd-action">
+            <div class="form-row">
+              <label for="" class="text-lab">履历核实</label>
+              <p class="content">核实履历会扣除您 100 背调积分</p>
+            </div>
+            <div class="form-row">
+              <label for="name" class="text-lab">姓名</label>
+              <p class="content"><input type="text" id="name" name="name" class="input-field" placeholder="请填写候选人姓名" /></p>
+            </div>
+            <div class="form-row">
+              <label for="mobile" class="text-lab">手机</label>
+              <p class="content"><input type="text" id="mobile" name="mobile" class="input-field" placeholder="请填写候选人的手机" /></p>
+            </div>
+            <div class="form-row">
+              <label for="email" class="text-lab">邮箱</label>
+              <p class="content"><input type="text" id="email" name="email" class="input-field" placeholder="请填写候选人的邮箱" /></p>
+            </div>
+            <div class="form-row">
+              <label for="companyName" class="text-lab">公司名称</label>
+              <p class="content"><input type="text" id="companyName" name="companyName" class="input-field" placeholder="请填写候选人当时所在的公司名称" /></p>
+            </div>
+            <div class="form-row btn-form-row">
+              <label for="" class="text-lab">&nbsp;</label>
+              <p class="content"><a href="javascript:;" class="btn-main btn-send">发起背调</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <%- include('../common/my/footer.ejs') %>
+    </div>
+    <script type="text/javascript" src="/dist/send.js?v=<%= ts %>"></script>
+  </body>
+</html>
