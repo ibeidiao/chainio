@@ -1,0 +1,140 @@
+@import '../common/base.less';
+
+.popup-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  z-index: 201;
+  filter: alpha(opacity=40);
+	-moz-opacity: 0.4;;
+	opacity: 0.4;;
+  transition: opacity 0.2s ease-out;
+}
+
+.popup-wrap {
+	background-color: #fff;
+	position: fixed;
+	top: 120px;
+	left: 50%;
+	width: 300px;
+	height: auto;
+	margin-left: -150px;
+	z-index: 205;
+	box-shadow: 0px 0px 12px 0px rgba(171, 171, 171, 0.4);
+}
+
+.popup-wrap.medium {
+	width: 506px;
+	margin-left: -253px;
+}
+
+.popup-wrap .title-bar {
+	height: 49px;
+	line-height: 48px;
+	border-bottom: 1px solid #eee;
+	padding: 0 8px;
+	font-size: 16px;
+	color: #3E4D55;
+	font-weight: bold;
+  margin: 0 12px;
+}
+
+.popup-wrap .title-bar i {
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	top: 1px;
+	right: 14px;
+	-webkit-transition: all .25s;
+  transition: all .25s;
+  color: #BFBFBF;
+  font-size: 20px;
+  .color-hover(#BFBFBF);
+}
+
+.popup-wrap .content {
+	margin: 25px;
+  .scroll-content {
+    overflow-y: auto;
+    max-height: 350px;
+  }
+}
+
+.popup-wrap .btn-row {
+	text-align: right;
+  padding-right: 18px;
+  margin-bottom: 20px;
+}
+
+.popup-wrap .btn-row .btn {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 0;
+	height: 30px;
+	line-height: 28px;
+	text-align: center;
+	padding: 0 30px;
+	font-size: 14px;
+}
+
+.popup-wrap .btn-row .btn9 {
+  display: inline-block;
+	background-color: #fff;
+	border: solid 1px #E6E6E6;
+	color: #333;
+  height: 34px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.popup-wrap .btn-row .btn1 {	
+	background-color: #ED7642;
+	color: #fff;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  .btn-hover(#ED7642);
+}
+
+
+/** cz **/
+.cz-wrap {
+  .h {
+    color: #3E4D55;
+    font-size: 16px;
+    &.h2 {
+      margin-top: 30px;
+    }
+  }
+  .input-content {
+    margin-top: 20px;
+    font-size: 0;
+    vertical-align: top;
+    .input-field {
+      float: left;
+      width: 370px;
+      height: 38px;
+      line-height: normal;
+      vertical-align: middle;
+      border: 1px solid #CACACA;
+      border-radius: 2px;
+      color: #1F0404;
+      font-size: 14px;
+      outline: 0;
+      padding: 0 20px;
+    }
+    .yuan {
+      display: inline-block;
+      color: #3E4D55;
+      font-size: 16px;
+      margin-left: 20px;
+      line-height: 38px;
+    }
+    .pay-method {
+      margin-top: 24px;
+    }
+  }
+}

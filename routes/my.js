@@ -42,4 +42,16 @@ router.get('/my/receive/info/:id', async (ctx, next) => {
   })
 })
 
+router.get('/my/send/info/:id', async (ctx, next) => {
+  await ctx.render('my/sendInfo', {
+    title: '背调详情_'
+  })
+})
+
+router.get('/my/reply/:id', async (ctx, next) => {
+  await ctx.render('my/reply', {
+    title: '回复背调_'
+  })
+})
+
 module.exports = router

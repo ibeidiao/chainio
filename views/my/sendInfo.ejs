@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <%- include('../common/head.ejs') %>
+    <title><%= title %>职业信用联盟</title>
+    <% if (env !== 'dev') { %>
+      <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/my/sendInfo.css?v=<%= ts %>">
+    <% } %>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <%- include('../common/my/header.ejs', {cname: '杭州有才信息技术有限公司'}) %>
+      <%- include('../common/my/leftNav.ejs', {page: 'orderList'}) %>
+      <div class="main-wrap">
+        <ul class="bread-crumb"><li><a href="/my/orderList">发起的背调</a></li><li class="s">/</li><li>详情</li></ul>
+        <div class="form-action info-action">
+          <div class="form-row">
+            <label for="" class="text-lab">核实内容</label>
+            <p class="content">工作履历核实</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">姓名</label>
+            <p class="content">丁伟杰</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">部门</label>
+            <p class="content">产品部</p>
+          </div>
+          <div class="form-row pl-0">
+            以下是对方给您提供的背调信息
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">供职时间</label>
+            <p class="content">2017年8月～2018年2月</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">职位描述</label>
+            <p class="content">这里是职位描述这里是职位描述这里是职位描述 这里是职位描述这里是职位描述这里是职位描述</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">薪酬范围</label>
+            <p class="content">8～9k每月</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">离职原因</label>
+            <p class="content">个人原因发展</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">重大违规违纪</label>
+            <p class="content">无</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">劳动争议或仲裁</label>
+            <p class="content">无</p>
+          </div>
+        </div>
+      </div>
+      <%- include('../common/my/footer.ejs') %>
+    </div>
+    <script type="text/javascript" src="/dist/sendInfo.js?v=<%= ts %>"></script>
+  </body>
+</html>

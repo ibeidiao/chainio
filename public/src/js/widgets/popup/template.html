@@ -1,0 +1,20 @@
+<div class="popup-wrap <%= tsClass %> <%= appendClass %>">
+	<div class="title-bar clearfix2"><%= title %><i class="iconfont chainio-icon-delete_s x"></i></div>
+	<div class="content clearfix2">
+		<div class="scroll-content">
+			<%= html %>
+		</div>
+	</div>
+	<% 
+		var len = btns.length;
+		if (len > 0) {
+	%>
+	<div class="btn-row clearfix2">
+		<div class="btns">
+			<% for (var i = 0; i < len; i++) { %>
+				<a href="javascript:;" class="btn <%= btns[i].css %>"><%= btns[i].text %></a>
+			<% } %>
+		</div>
+	</div>
+	<% 	} %>
+</div>

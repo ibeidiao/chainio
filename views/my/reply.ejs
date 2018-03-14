@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <%- include('../common/head.ejs') %>
+    <title><%= title %>职业信用联盟</title>
+    <% if (env !== 'dev') { %>
+      <link rel="stylesheet" type="text/css" charset="utf-8" href="/dist/css/my/reply.css?v=<%= ts %>">
+    <% } %>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <%- include('../common/my/header.ejs', {cname: '杭州有才信息技术有限公司'}) %>
+      <%- include('../common/my/leftNav.ejs', {page: ''}) %>
+      <div class="main-wrap">
+        <ul class="bread-crumb"><li><a href="/my/receive">收到的背调</a></li><li class="s">/</li><li>回复背调</li></ul>
+        <h2 class="main-title">订单信息</h2>
+        <div class="form-action info-action">
+          <div class="form-row">
+            <label for="" class="text-lab">姓名</label>
+            <p class="content">刘小美</p>
+          </div>
+          <div class="form-row">
+            <label for="" class="text-lab">部门</label>
+            <p class="content">客服部</p>
+          </div>
+        </div>
+        <h2 class="main-title">履历信息</h2>
+        <form action="" method="post">
+          <div class="form-action reply-action">
+            <div class="form-row">
+              <label for="" class="text-lab">供职时间</label>
+              <p class="content date-content">
+                <input type="text" id="startDate" name="startDate" class="input-field small" placeholder="开始时间" />
+                <span>-</span>
+                <input type="text" id="endDate" name="endDate" class="input-field small" placeholder="结束时间" />
+              </p>
+            </div>
+            <div class="form-row">
+              <label for="" class="text-lab">供职方式</label>
+              <p class="content serve-type-content"></p>
+            </div>
+            <div class="form-row">
+              <label for="positionDesc" class="text-lab">职位描述</label>
+              <p class="content"><input type="text" id="positionDesc" name="positionDesc" class="input-field" placeholder="该职位的工作内容相关描述" /></p>
+            </div>
+            <div class="form-row">
+              <label for="salary" class="text-lab">薪酬范围</label>
+              <p class="content"><input type="text" id="salary" name="salary" class="input-field" placeholder="选择其薪资范围" /></p>
+            </div>
+            <div class="form-row">
+              <label for="leaveReason" class="text-lab">离职原因</label>
+              <p class="content"><input type="text" id="leaveReason" name="leaveReason" class="input-field" placeholder="填写其离职原因" /></p>
+            </div>
+            <div class="form-row">
+              <label for="" class="text-lab two">是否存在重大<br />违规违纪？</label>
+              <p class="content violation-of-dis-content"></p>
+            </div>
+            <div class="form-row">
+              <label for="" class="text-lab two">是否发生劳动<br />争议或仲裁？</label>
+              <p class="content controversy-content"></p>
+            </div>
+            <div class="form-row btn-form-row">
+              <label for="" class="text-lab">&nbsp;</label>
+              <p class="content"><a href="javascript:;" class="btn-main btn-reply">回复该背调</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <%- include('../common/my/footer.ejs') %>
+    </div>
+    <script type="text/javascript" src="/asset/js/laydate/laydate.js"></script>
+    <script type="text/javascript" src="/dist/reply.js?v=<%= ts %>"></script>
+  </body>
+</html>
