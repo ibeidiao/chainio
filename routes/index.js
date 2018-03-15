@@ -26,14 +26,9 @@ router.post('/login', async (ctx, next) => {
   await next();
 })
 
-router.get('/string', async (ctx, next) => {
-  ctx.body = 'koa2 string'
-})
-
-router.get('/json', async (ctx, next) => {
-  ctx.body = {
-    title: 'koa2 json'
-  }
+router.get('/logout', async (ctx, next) => {
+  ctx.session = {}
+  await ctx.redirect('/login');
 })
 
 module.exports = router

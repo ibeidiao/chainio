@@ -1,9 +1,15 @@
 <header class="my-header clearfix">
   <a href="/" class="logo"></a>
   <div class="user-info">
-    <div class="top clearfix">
+    <div class="top clearfix2">
       <!-- <img class="user-head" src="" alt="" /> -->
-      <p class="user-cname"><%= cname %></p>
+      <div class="user-cname">
+      	<%= cname %>
+      	<ul>
+					<li><a href="/my/info" class="account">账号信息</a></li>
+					<li><a href="/logout" class="logout">退出登录</a></li>
+      	</ul>
+      </div>
     </div>
   </div>
 </header>
