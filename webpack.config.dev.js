@@ -49,6 +49,10 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   plugins: [
+    new webpack.ProvidePlugin({ //加载jq
+      $: 'jquery',
+      jQuery: "jquery"
+    }),
     new CleanWebpackPlugin([path.resolve(__dirname, 'public/dist')]),
     new webpack.HotModuleReplacementPlugin()
   ]

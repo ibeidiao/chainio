@@ -1,0 +1,62 @@
+/** cz **/
+@import './../widgets/popup.less';
+
+.cz-wrap {
+  .h {
+    color: #3E4D55;
+    font-size: 16px;
+    &.h2 {
+      margin-top: 30px;
+    }
+  }
+  .input-content {
+    margin-top: 15px;
+    font-size: 0;
+    vertical-align: top;
+    .input-field {
+      float: left;
+      width: 370px;
+      height: 38px;
+      line-height: normal;
+      vertical-align: middle;
+      border: 1px solid #CACACA;
+      border-radius: 2px;
+      color: #1F0404;
+      font-size: 14px;
+      outline: 0;
+      padding: 0 20px;
+    }
+    .yuan {
+      display: inline-block;
+      color: #3E4D55;
+      font-size: 16px;
+      margin-left: 20px;
+      line-height: 38px;
+    }
+    .pay-method {
+      i {
+        display: inline-block;
+        width: 112px;
+        height: 34px;
+        background-repeat: no-repeat;
+        margin-right: 30px;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.wechat {
+          background-image: url(../../images/pay/wechat-unchecked.png);
+          &.active {
+            background-image: url(../../images/pay/wechat-checked.png);
+          }
+        }
+        &.alipay {
+          background-image: url(../../images/pay/alipay-unchecked.png);
+          &.active {
+            background-image: url(../../images/pay/alipay-checked.png);
+          }
+        }
+      }
+    }
+  }
+}

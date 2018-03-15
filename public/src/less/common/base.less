@@ -64,6 +64,10 @@ input,img{
   vertical-align: top;
 }
 
+.disabled {
+  cursor: not-allowed !important;
+}
+
 .clearfix::after {
   display: block;
   clear: both;
@@ -141,4 +145,25 @@ h1, h2, h3, h4, h5, h6 {
   &:hover {
     color: darken(@c, @offset);
   }
+}
+
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+}
+
+@keyframes bounceOutDown {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    top: 120px;
+  }
+}
+
+.bounceOutDown {
+  animation-name: bounceOutDown;
 }
