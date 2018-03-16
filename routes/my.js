@@ -39,8 +39,21 @@ router.get('/my/points', async (ctx, next) => {
 })
 
 router.get('/my/receive/info/:id', async (ctx, next) => {
+  var name = '刘小美', dept = '客服部',
+    id = ctx.params.id;
+
+  if (10002 == id) {
+    name = '王帅';
+    dept = '技术部';
+  } else if (10003 == id) {
+    name = '杜杰';
+    dept = '产品部';
+  }
   await ctx.render('my/receiveInfo', {
-    title: '背调详情_'
+    title: '背调详情_',
+    id: id,
+    name: name,
+    dept: dept
   })
 })
 
@@ -51,8 +64,22 @@ router.get('/my/send/info/:id', async (ctx, next) => {
 })
 
 router.get('/my/reply/:id', async (ctx, next) => {
+  var name = '刘小美', dept = '客服部',
+    id = ctx.params.id;
+
+  if (10002 == id) {
+    name = '王帅';
+    dept = '技术部';
+  } else if (10003 == id) {
+    name = '杜杰';
+    dept = '产品部';
+  }
+
   await ctx.render('my/reply', {
-    title: '回复背调_'
+    title: '回复背调_',
+    id: id,
+    name: name,
+    dept: dept
   })
 })
 
