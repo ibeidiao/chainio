@@ -10,7 +10,7 @@ var tip = {
 				$(this).remove();
 				cb && cb();
 			});
-		}, 2000);
+		}, 1500);
 	},
 	warn: function (h, cb) {
 		var tsCls = new Date().getTime() + '-tip',
@@ -21,7 +21,7 @@ var tip = {
 				$(this).remove();
 				cb && cb();
 			});
-		}, 2000);
+		}, 1500);
 	}
 };
 

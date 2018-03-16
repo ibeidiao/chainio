@@ -1,7 +1,7 @@
 <div class="cz-wrap">
 	<p class="h">请输入充值金额：(1元=1积分)</p>
 	<div class="input-content">
-		<input type="text" class="input-field val" placeholder="请输入您的充值金额" /><span class="yuan">元</span>
+		<input type="text" class="input-field val" placeholder="请输入您的充值金额" onkeyup="this.value=this.value.replace(/(\D)/g,'')" /><span class="yuan">元</span>
 	</div>
 	<p class="h h2">选择充值方式</p>
 	<div class="input-content">

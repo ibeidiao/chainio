@@ -13,8 +13,10 @@ router.get('/my/info', async (ctx, next) => {
 })
 
 router.get('/my/orderList', async (ctx, next) => {
+  const type = ctx.query.type;
   await ctx.render('my/orderList', {
-    title: '背调记录_'
+    title: '背调记录_',
+    type: type
   })
 })
 
