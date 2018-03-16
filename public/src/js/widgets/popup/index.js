@@ -40,14 +40,14 @@ Popup.prototype = {
     compiled = _.template(template);
     compiled = compiled({ 'html': html, title: title, tsClass: tsClass, appendClass: appendClass, btns: btns });
 
-    //$('body').append($('<div class="popup-mask ' + tsClass + '-mask"></div>'));
+    $('body').append($('<div class="popup-mask ' + tsClass + '-mask"></div>'));
     $('body').append($(compiled));
 
     var $popup = $('.' + tsClass);
 
     $popup.find('.x').on('click', function(e) {
       $popup.remove();
-      //$('.' + tsClass + '-mask').remove();
+      $('.' + tsClass + '-mask').remove();
       closeCallback && closeCallback();
     });
 
@@ -66,7 +66,7 @@ Popup.prototype = {
     var options = this.options,
         $popup = $('.' + options.tsClass);
     $popup.remove();
-    //$('.' + options.tsClass + '-mask').remove();
+    $('.' + options.tsClass + '-mask').remove();
     options.closeCallback && options.closeCallback();
   },
   getBtns: function () {
