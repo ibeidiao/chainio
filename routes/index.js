@@ -17,7 +17,7 @@ router.get('/login', async (ctx, next) => {
 router.post('/login', async (ctx, next) => {
   const privateKey = ctx.request.body.privateKey;
   const returnUrl = ctx.request.body.returnUrl;
-  if ('5Jvqsujc5BWfLv7wWJAYDeyA2ShCutCrEm5jarx8GsZQkDjw8Gh' === privateKey) {
+  if ('5Jvqsujc5BWfLv7wWJAYDeyA2S' === privateKey) {
     ctx.session.privateKey = privateKey;
     ctx.body = { errorNo : 0 };
   } else {
