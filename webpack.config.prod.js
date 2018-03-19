@@ -64,6 +64,6 @@ module.exports = {
         drop_console: false,
       }
     }),
-    new ExtractTextPlugin('css/[name].css'),  
+    new ExtractTextPlugin('css/[name].css')
   ]
 }
