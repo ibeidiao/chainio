@@ -43,7 +43,7 @@ $(function() {
       success : function (json) {
         if (0 == json.errorNo) {
           tip.success('导入成功', function() {
-            window.location.href = (returnUrl ? returnUrl : '/');
+            window.location.href = (returnUrl ? returnUrl : '/my');
           });
         } else {
           tip.warn('导入失败，请重新导入');
